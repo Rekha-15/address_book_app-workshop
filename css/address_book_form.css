@@ -1,176 +1,167 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
-    margin:0;
+    margin:0px;
     height: 100%;
 }
 
 .header{
-    padding: 15px 0;
-    background-color: white;
+    padding:15px 0;
+    background-color: #ffffff;
 }
 
 .header-content{
-    display: flex;
+    display:flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    border:0px solid green;
+    align-items:center;
+    border:0px solid blue;
+    text-align: left;
 }
 
-.logo-content
-{
+.logo-content{
     display: flex;
     flex-direction: row;
-    width:80%;
     align-items: center;
-    border:0px solid green; 
+    border:0px solid blue;
+    width: 80%;
 }
 
 .logo-content-img{
-    border : solid 10px #0d0e0f;
-    height : 10%;
+    border: solid 0px #42515f;
 }
 
-.addbook-text{
-    font: normal normal bold 15px/25px Montserrat;
-    font-family: "Montserrat",sans-serif;
+.address-text{
+    font: normal normal bold 22px/25px Montserrat;
     letter-spacing: 0px;
-    margin:-1020px;
-    color: blue;
-    text-transform: capitalize;
-    flex-direction: row;
+    color: #008CFF;
+    text-transform: uppercase;
 }
-.address-book{
+
+.book{
     color: #42515f;
-    padding: 0px;
-    margin :-1020px;
-    flex-direction: row;
 }
 
-*{box-sizing: border-box;}
-
-/* UC 2*/
-.form-content {
-    padding-top: 40px;
-    min-height:calc(100% -80px);
-    background-color:#f7f7f7;
-    display:flex;
+.form-content{
+    padding-top: 60px;
+    min-height: calc(100% - 80px);
+    background-color: #f7f7f7;
+    display: flex;
     justify-content: center;
+    align-items: center; 
+ }
+ 
+ .form{
+     width: 65%;
+     background: #ffffff 0% 0% no-repeat padding-box;
+     box-shadow: 0px 3px 6px #00000029;
+     border: 1px solid #f5f5f5;
+     border-radius: 8px;
+     opacity: 1;
+ }
+ 
+ .form-head-content{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-around;
+     background: #008CFF 0% 0% no-repeat padding-box;
+     height: 78px;
+     width: 100%;
+     margin-top: 0px;
+     margin-bottom: 40px;
+     border-radius: 8px 8px 0px 0px;
+ }
+ 
+ .form-head{
+     font: normal normal normal 24px/37px Roboto;
+     letter-spacing: 0px;
+     color: #ffffff;
+     text-transform: uppercase;
+     background: #008CFF 0% 0% no-repeat padding-box;
+     opacity: 1;
+     padding-top: 10px;
+     padding-left: 300px;
+ }
+ 
+ .form-logo-content{
+     padding-left: 200px;
+     cursor: pointer;
+     padding-top: 10px;
+ }
+
+ .row-content{
+    display: flex;
+    padding-right:  150px; 
+    padding-left:  150px; 
+    flex-direction: column;
+    margin-bottom: 40px;
+    /* align-items: center; */
+    border: 0px solid green;
+}
+
+.row-content-exp{
+    display: flex;
+    padding-right:  150px; 
+    padding-left:  150px; 
+    flex-direction: row;
+    margin-bottom: 40px;
     align-items: center;
     border: 0px solid green;
-    } 
+}
 
-    .form {
-        width: 70%;
-        background:white 0% 0% no-repeat padding-box;
-        box-shadow: 0px 3px 6px #00000029;
-        border-radius: 8px;
-        opacity: 1;
-    }
+.oneRow-content{
+    display: flex;
+    padding-right:  20px;
+    width: 100%; 
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-left:  0px; 
+    flex-direction: column;
+    margin-bottom: 20px;
+    border: 0px solid green;
+}
 
-    .form-head {
-        font: normal normal bold 24px/37px Roboto;
-        letter-spacing: 0px;
-        color: white;
-        background-color: blue;
-        text-align: center;
-        text-transform: capitalize;
-        opacity: 1;
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
+.text{
+    font-size:16px;
+    color: #42515f;
+    opacity: 1;
+    font-family: Roboto;
+}
 
-    .row-content {
-        padding-left: 100px;
-        padding-right: 100px;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
-        align-items: left;
-        border: 0px solid green;
-        padding-top: 40px;
-    }
+.label{
+    text-align: left;
+    font: normal normal normal 16px/24px Roboto;
+    letter-spacing: 0px;
+    color: #42515F;
+    opacity: 1;
+}
 
-    .head{
-       
-        flex: display;
-        flex : row;
-    }
+.input{
+    width: 100%;
+    padding: 12px;
+    margin-right: 15px;
+    border-radius: 4px;
+    resize: vertical;
+    border: 1px solid #BDBDBD;
+    opacity: 1;
+}
 
-    .cross{
-        align-items: right;
-        margin-right: 50px;;     
-    }
+.select-input{
+    width: 100%;
+    padding: 12px;
+    margin-right: 15px;
+    border-radius: 4px;
+    resize: vertical;
+    border: 1px solid #BDBDBD;
+    opacity: 1;
+}
 
-    /* UC 3*/
-    .input {
-        width: 100%;
-        padding:20px;
-        border:1px solid black;
-        border-radius: 4px;
-        resize:vertical;
-    }
-    
-    .phone-content {
-        padding-left: 100px;
-        padding-right: 100px;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
-        align-items: left;
-        border: 0px solid green;
-        padding-top: 00px;
-    }
-    
-    .address {
-        width: 100%;
-        line-height: 700%;
-        padding:20px;
-        border:1px solid black;
-        border-radius: 4px;
-        resize:vertical;
-    }
-    
-    select{
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        resize: vertical;
-        font: normal normal normal 16px Roboto;
-        letter-spacing: 0px;
-        color: #42525f;
-        background-color: transparent;
-        font: normal normal bold 15px/25px Montserrat;
-    } 
-    
-    .address-content {
-        padding-left: 100px;
-        padding-right: 100px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-bottom: 10px;
-        align-items: left;
-        border: 0px solid green;
-        padding-top: 00px;
-        font: normal normal 15px/25px Montserrat;
-       
-    }
-    
-    .row-citystate {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 10px;
-        align-items: center;
-        border: 0px solid green;
-        padding-top: 00px;
-        
-    }
-    
-    .input1 {
-        width: 100%;
-        padding:10px;
-        border:1px solid black;
-        resize:vertical;
-        line-height:80%;
-        margin-block-start: -100px;
-    }
+error-output{
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+}
