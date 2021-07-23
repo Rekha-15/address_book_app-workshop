@@ -92,6 +92,13 @@ body{
      padding-top: 10px;
  }
 
+ #cancel-icon {
+    position: absolute;
+    right: 15px;
+    top: 23px;
+    cursor: pointer;
+}
+
  .row-content{
     display: flex;
     padding-right:  150px; 
