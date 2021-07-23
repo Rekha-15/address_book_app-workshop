@@ -4,7 +4,7 @@
 
 body{
     margin:0px;
-    height: 100%;
+    height: auto;
 }
 
 .header{
@@ -46,7 +46,7 @@ body{
 
 .form-content{
     padding-top: 60px;
-    min-height: calc(100% - 80px);
+    /* min-height: calc(100% - 80px); */
     background-color: #f7f7f7;
     display: flex;
     justify-content: center;
