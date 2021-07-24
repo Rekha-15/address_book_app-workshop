@@ -1,6 +1,14 @@
+let contactList;
 window.addEventListener('DOMContentLoaded',(event) => {
+    contactList = getContactDataFromStorage();
+    document.querySelector(".person-count").textContent = contactList.length;
     createInnerHtml();
   });
+
+  const getContactDataFromStorage = () => {
+    return localStorage.getItem("ContactList") ?
+                        JSON.parse(localStorage.getItem('ContactList')) : [];
+  }
 
   const createInnerHtml = () => {
     const headerHtml = ` 
@@ -12,15 +20,13 @@ window.addEventListener('DOMContentLoaded',(event) => {
       <th>Phone Number</th>
       <th>Email</th>
     `;
-    let contactList = createContactJSON();
     if(contactList.length == 0) return;
-    document.querySelector(".person-count").textContent = contactList.length;
     let innerHtml = `${headerHtml}`;
     for(const contactData of contactList)
     {
     innerHtml = `${innerHtml}
     <tr>
-        <td>${contactData._firstName}${contactData._lastName}</td>
+        <td>${contactData._firstName} ${contactData._lastName}</td>
         <td>${contactData._address}</td>
         <td>${contactData._city}</td>
         <td>${contactData._state}</td>
@@ -37,30 +43,4 @@ window.addEventListener('DOMContentLoaded',(event) => {
     `;
     }
   document.querySelector('#table-display').innerHTML = innerHtml;
-  }
-
-  const createContactJSON = () => {
-    let contactListLocal = [
-    {
-        _firstName: "Rekha",
-        _lastName: "Patil",
-        _address: "GKW Layout",
-        _city: "Bangalore",
-        _email: "Rekha@gmail.com",
-        _phone: "8987776787",
-        _state: "Karnataka",
-        _zip: "560058",
-    },
-    {
-        _firstName: "Rashmi",
-        _lastName: "Patil",
-        _address: "Peenya 2nd stage",
-        _city: "Bangalore",
-        _email: "rashmi@Outlook.com",
-        _phone: "9145676576",
-        _state: "Karnataka",
-        _zip: "560059",
-    }
-    ];
-    return contactListLocal;
   }
