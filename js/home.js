@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded',(event) => {
 
   const getContactDataFromStorage = () => {
     return localStorage.getItem("ContactList") ?
-                        JSON.parse(localStorage.getItem('ContactList')) : [];
+        JSON.parse(localStorage.getItem('ContactList')) : [];
   }
 
   const createInnerHtml = () => {
@@ -35,9 +35,9 @@ window.addEventListener('DOMContentLoaded',(event) => {
         <td>${contactData._email}</td>
         <td>
         <img id="${contactData._id}" onclick="remove(this)" alt="delete" 
-                src="../asserts/icons/delete-black-18dp.svg">
+                src="../assets/icons/delete-black-18dp.svg">
         <img id="${contactData._id}" alt="edit" onclick="update(this)"
-                src="../asserts/icons/create-black-18dp.svg">
+                src="../assets/icons/create-black-18dp.svg">
         </td>
     </tr>
     `;
@@ -53,4 +53,11 @@ window.addEventListener('DOMContentLoaded',(event) => {
       document.querySelector(".person-count").textContent = contactList.length;
       localStorage.setItem("ContactList",JSON.stringify(contactList));
       createInnerHtml();
+  }
+
+  const update = (node) => {
+    let contact = contactList.find(cnt => cnt._id == node.id);
+    if(!contact) return;
+    localStorage.setItem("editContact",JSON.stringify(contact));
+    window.location.replace(siteproperties.add_contact_page);
   }
