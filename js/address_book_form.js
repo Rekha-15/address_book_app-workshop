@@ -76,7 +76,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     contactData.email = getInputValueById('#email');
     return contactData;
   }
-  
+  //storying data into local storage
   function createAndUpdateStorage(contactData){
     let contactList = JSON.parse(localStorage.getItem("ContactList"));
   
@@ -95,6 +95,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     return value;
   }
   
+  //setting retset form
   const resetForm = () => {
       setValue('#name','');
       setValue('#address','');
