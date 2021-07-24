@@ -1,83 +1,83 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!--Roboto fonts link-->
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="../css/address_book_form.css">
-      <!--Montserrat:ital font link-->
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;1,500&display=swap" rel="stylesheet">
-      <title>Address Book Form</title>
-      <link rel="shortcut icon" href="#" />
-    </head>
-    <body>
-      <header class="header-content header">
-        <div class="logo-content">
-          <!--logo content-->
-          <img src="../asserts/addressbook.jpeg">
-          <div>
-            <span class="address-text">Address</span><br>
-            <span class="address-text book">Book</span>
-          </div>
-        </div>
-      </header>
-      <!---form header-->
-      <div class="form-content">
-        <form class="form" action="#" onreset="resetForm()" onsubmit="save(event)">
-            <div class="form-head-content">
-                <div class="form-head">Person Address Form</div>
-                <div class="form-logo-content">
-                    <a href="./homepage.html" ><img src="../asserts/cancel.jpeg" style="height: 46px;"></a>
-                </div>
-            </div>
-            <!--adding input fields like Name, Address, city,state,zip code, email id-->
-            <div class="row-content">
-              <label class="label text" for="name">Full Name</label>
-              <div class="row-input">
-              <input class="input" type="text" name="Name" id="name" required>
-              <error-output class="name-error" for="text"></error-output>
-            </div>
-          </div>
-          <div class="row-content">
-            <label class="label text" for="address">Address</label>
-              <textarea class="input" id="address" name="Address" style="height: 100px;" required></textarea>
-              <error-output class="address-error" for="address"></error-output>
-          </div>
-          <div class="row-content-exp">
-            <div class="oneRow-content">
-            <label class="label text" for="city">City</label>
-            <select class="select-input" id="city" name="City" required>
-              <option value="" selected disabled hidden>Select City</option>
-              <option value="Amaravathi">Amaravathi</option>
-              <option value="Hyderabad">Hyderabad</option>
-              <option value="Chennai">Chennai</option>
-              <option value="Bangalore">Bangalore</option>
-              <option value="Mumbai">Mumbai</option>
-              <option value="Bhopal">Bhopal</option>
-            </select>
-          </div>
-          <div class="oneRow-content">
-            <label class="label text" for="state">State</label>
-            <select class="select-input" id="state" name="State" required>
-              <option value="" selected disabled hidden>Select State</option>
-              <option value="Andhra Pradesh">Andhra Pradesh</option>
-              <option value="Telanagana">Telanagana</option>
-              <option value="Tamil Nadu">Tamil Nadu</option>
-              <option value="Karnataka">Karnataka</option>
-              <option value="Maharashtra">Maharashtra</option>
-              <option value="Madhya Pradesh">Madhya Pradesh</option>
-            </select>
-          </div>
-          <div class="oneRow-content">
-            <label class="label text" for="zip">Zip</label>
-            <input class="input" type="text" name="Zip" id="zip" required>
-          </div>
-        </div>
-        <div class="row-content">
-          <label class="label text" for="phone">Phone Number</label>
-          <input class="input" type="text" name="Phone" id="phone" required>
-          <error-output class="phone-error" for="text"></error-output>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--Roboto fonts link-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/address_book_form.css">
+<!--Montserrat:ital font link-->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;1,500&display=swap" rel="stylesheet">
+  <title>Address Book Form</title>
+  <link rel="shortcut icon" href="#" />
+</head>
+<body>
+<header class="header-content header">
+  <div class="logo-content">
+<!--logo content-->
+  <img src="../asserts/addressbook.jpeg">
+  <div>
+     <span class="address-text">Address</span><br>
+      <span class="address-text book">Book</span>
+  </div>
+  </div>
+  </header>
+<!---form header-->
+  <div class="form-content">
+  <form class="form" action="#" onreset="resetForm()" onsubmit="save(event)">
+    <div class="form-head-content">
+    <div class="form-head">Person Address Form</div>
+    <div class="form-logo-content">
+      <a href="./homepage.html" ><img src="../asserts/cancel.jpeg" style="height: 46px;"></a>
+    </div>
+    </div>
+<!--adding input fields like Name, Address, city,state,zip code, email id-->
+    <div class="row-content">
+    <label class="label text" for="name">Full Name</label>
+    <div class="row-input">
+      <input class="input" type="text" name="Name" id="name" required>
+      <error-output class="name-error" for="text"></error-output>
+    </div>
+    </div>
+    <div class="row-content">
+    <label class="label text" for="address">Address</label>
+    <textarea class="input" id="address" name="Address" style="height: 100px;" required></textarea>
+    <error-output class="address-error" for="address"></error-output>
+    </div>
+    <div class="row-content-exp">
+      <div class="oneRow-content">
+      <label class="label text" for="city">City</label>
+      <select class="select-input" id="city" name="City" required>
+      <option value="" selected disabled hidden>Select City</option>
+      <option value="Amaravathi">Amaravathi</option>
+      <option value="Hyderabad">Hyderabad</option>
+      <option value="Chennai">Chennai</option>
+      <option value="Bangalore">Bangalore</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="Bhopal">Bhopal</option>
+      </select>
+      </div>
+      <div class="oneRow-content">
+        <label class="label text" for="state">State</label>
+        <select class="select-input" id="state" name="State" required>
+        <option value="" selected disabled hidden>Select State</option>
+        <option value="Andhra Pradesh">Andhra Pradesh</option>
+        <option value="Telanagana">Telanagana</option>
+        <option value="Tamil Nadu">Tamil Nadu</option>
+        <option value="Karnataka">Karnataka</option>
+        <option value="Maharashtra">Maharashtra</option>
+        <option value="Madhya Pradesh">Madhya Pradesh</option>
+    </select>
+      </div>
+      <div class="oneRow-content">
+        <label class="label text" for="zip">Zip</label>
+        <input class="input" type="text" name="Zip" id="zip" required>
+      </div>
+      </div>
+      <div class="row-content">
+      <label class="label text" for="phone">Phone Number</label>
+      <input class="input" type="text" name="Phone" id="phone" required>
+      <error-output class="phone-error" for="text"></error-output>
       </div>
       <div class="row-content">
         <label class="label text" for="email">Email</label>
@@ -88,10 +88,10 @@
     <div class="submit-reset">
       <button type="submit" class="button submitButton" id="submitButton">Add</button>
       <button type="button" onclick="resetForm()" class="resetButton button">Reset</button>
-    </div>
-        </form>
-    </div>
-    <script src="../js/address_book.js"></script>
-      <script src="../js/address_book_form.js"></script>
-    </body>
+</div>
+</form>
+</div>
+<script src="../js/address_book.js"></script>
+<script src="../js/address_book_form.js"></script>
+</body>
 </html>
