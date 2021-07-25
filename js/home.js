@@ -35,9 +35,9 @@ window.addEventListener('DOMContentLoaded',(event) => {
         <td>${contactData._email}</td>
         <td>
         <img id="${contactData._id}" onclick="remove(this)" alt="delete" 
-                src="../assets/icons/delete-black-18dp.svg">
+                src="../asserts/icons/delete-black-18dp.svg">
         <img id="${contactData._id}" alt="edit" onclick="update(this)"
-                src="../assets/icons/create-black-18dp.svg">
+                src="../asserts/icons/create-black-18dp.svg">
         </td>
     </tr>
     `;

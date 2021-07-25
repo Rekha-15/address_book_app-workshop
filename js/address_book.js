@@ -1,4 +1,3 @@
-//setter and getter methods
 class Contact{
 
     get id()
@@ -16,7 +15,6 @@ class Contact{
         return this._firstName;
     }
 
-    //setting validation or regex for firtname
     set firstName(firstName)
     {
         let firstNameRegex = RegExp('^[A-Z][a-z]{2,}$')
@@ -26,7 +24,6 @@ class Contact{
         throw 'First Name Invalid'
     }
 
-    //setting validation or regex for lastname
     get lastName()
     {
         return this._lastName;
@@ -46,12 +43,11 @@ class Contact{
         return this._address;
     }
 
-    //setting validation or regex for address
     set address(address)
     {
         let words = address.split(" ");
         if(words.length>1){
-            let addressRegex = RegExp('^[A-Za-z,.0-9]{3,}$');
+            let addressRegex = RegExp('^[A-Za-z,/.0-9]{3,}$');
             for(const word of words){
                 if(!addressRegex.test(word))
                 throw 'Address Invalid';
@@ -68,10 +64,9 @@ class Contact{
         return this._city;
     }
 
-//setting validation or regex for city
     set city(city)
     {
-        let cityRegex = RegExp('^[A-Za-z\\s]{2,}$')
+        let cityRegex = RegExp('^[A-Za-z\\s]{4,}$')
         if(cityRegex.test(city))
         this._city = city;
         else
@@ -83,7 +78,6 @@ class Contact{
         return this._state;
     }
 
-    //setting validation or regex for state
     set state(state)
     {
         let stateRegex = RegExp('^[A-Za-z\\s]{4,}$')
@@ -98,7 +92,6 @@ class Contact{
         return this._zip;
     }
 
-    //setting validation or regex for zip code
     set zip(zip)
     {
         let zipRegex = RegExp('^[0-9]{3}[\\s]*[0-9]{2,}$');
@@ -113,7 +106,6 @@ class Contact{
         return this._phone;
     }
 
-    //setting validation or regex for 
     set phone(phone)
     {
         let phoneRegex1 = RegExp('^[1-9][0-9]{9}$');
@@ -130,10 +122,9 @@ class Contact{
         return this._email;
     }
 
-    //setting validation or regex for firtname
     set email(email)
     {
-        let emailRegex = RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9]+([.][a-zA-Z]{2,}){1,2}$");
+        let emailRegex = RegExp('^[a-zA-Z]+[a-zA-Z_+.-]*[a-zA-Z]+@[a-zA-Z]+[.][a-zA-z]{2,}$');
         if(emailRegex.test(email))
         this._email = email;
         else
